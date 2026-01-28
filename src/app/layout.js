@@ -19,7 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${dmSans.variable} antialiased`}>
         <div className="max-w-[1920px] mx-auto bg-[url('/assets/layoutBG.png')] bg-repeat-y py-20">
-          <div className="max-w-[1320px] mx-auto">
+          <div
+            className="max-w-[1320px] mx-auto bg-[#171B1A]"
+            style={{
+              boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.25)", // white shadow
+            }}
+          >
             <nav className="relative z-20">
               <span className="absolute -top-[80px] -left-[110px] z-10 font-bold text-[90px] text-white opacity-[0.06]">
                 Home
@@ -29,23 +34,21 @@ export default function RootLayout({ children }) {
                 <Navbar />
               </div>
             </nav>
-            <div className="grid grid-cols-12 min-h-screen">
-              {/* Left Aside */}
-              <aside className="col-span-1">
+
+            <div className="grid grid-cols-1 md:grid-cols-12 min-h-screen">
+              {/* Left Aside - hidden on mobile, appears on md+ */}
+              <aside className="hidden md:block md:col-span-1">
                 <LeftAside />
               </aside>
 
-              {/* Main */}
-              <main className="col-span-10">{children}</main>
+              {/* Main - takes full width on mobile, 10/12 on md+ */}
+              <main className="col-span-1 md:col-span-10">{children}</main>
 
-              {/* Right Aside */}
-              <aside className="col-span-1">
+              {/* Right Aside - hidden on mobile, appears on md+ */}
+              <aside className="hidden md:block md:col-span-1">
                 <RightAside />
               </aside>
             </div>
-            <footer>
-              <h1>Footer Section</h1>
-            </footer>
           </div>
         </div>
       </body>

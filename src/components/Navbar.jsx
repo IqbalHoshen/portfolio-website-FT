@@ -74,7 +74,11 @@ export default function Navbar() {
 
         {/* RIGHT */}
         <div className="navbar-end lg:col-span-3 lg:justify-end">
-          <button className="btn btn-outline btn-warning rounded-4xl btn-lg">
+          <button
+            className="btn btn-outline border border-[#F5BD4D] text-[#F5BD4D] 
+             hover:bg-gradient-to-r hover:from-[#F5BD4D] hover:to-[#F89222] 
+             hover:text-white hover:border-transparent transition-all rounded-4xl"
+          >
             Talk To Me
           </button>
         </div>
