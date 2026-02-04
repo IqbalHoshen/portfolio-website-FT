@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <div
             className="max-w-[1320px] mx-auto bg-[#171B1A]"
             style={{
-              boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.25)", // white shadow
+              boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.25)",
             }}
           >
             <nav className="relative z-20">

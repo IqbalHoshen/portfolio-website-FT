@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaPhone, FaCommentDots } from "react-icons/fa";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

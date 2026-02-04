@@ -18,8 +18,9 @@ import {
   FaBuilding,
 } from "react-icons/fa";
 import ContactForm from "@/components/ContactForm";
+import Portfolio_Nav from "@/components/portfolio/Portfolio_nav";
 
-export default function Home() {
+export default function Home({ children }) {
   const education = [
     {
       year: "2016 – 2020",
@@ -65,8 +66,9 @@ export default function Home() {
     { name: "Team Work", percentage: 95 },
     { name: "Web Design", percentage: 95 },
   ];
+
   return (
-    <div className="lg:grid lg:grid-cols-10  ">
+    <div className="lg:grid lg:grid-cols-10 ">
       <div className="lg:col-span-3">
         <Image src={"/assets/me.jpg"} width={368} height={504} alt="Image" />
         <div className="bg-black flex flex-row justify-center items-center gap-4 p-4 h-18">
@@ -169,6 +171,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div>
+          <div className="text-white text-5xl font-bold">Portfolio</div>
+          <nav className="mt-10 ">
+            <Portfolio_Nav />
+          </nav>
+          <div> {children}</div>
         </div>
 
         <footer>

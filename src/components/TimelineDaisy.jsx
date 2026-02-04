@@ -77,9 +77,6 @@ const EducationTimelineItem = ({
   );
 };
 
-/**
- * Full Timeline
- */
 export default function TimelineDaisy({ items = [] }) {
   if (!items?.length) {
     return (
